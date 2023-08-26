@@ -1,0 +1,65 @@
+// RACCOURCIS FLEX
+@mixin flexCentre {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flexCentreDroite {
+    align-items: center;
+    display: flex;
+    justify-content: end;
+}
+
+@mixin flexCentreGauche {
+    align-items: center;
+    display: flex;
+    justify-content: start;
+}
+
+// CACHER ET AFFICHER DES ÉLÉMENTS
+@mixin cacher {
+    max-width: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+}
+
+@mixin afficher {
+    visibility: visible;
+}
+
+// RACCOURCI COULEURS SPÉCIALES
+@mixin botBorderGradient {
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(0.25turn, #efb35d,#e25474,#70a09e);
+    border-image-slice: 1;
+    width:100%;
+}
+
+@mixin topBorderGradient {
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(0.25turn, #efb35d,#e25474,#70a09e);
+    border-image-slice: 1;
+    width:100%;
+}
+
+@mixin borderGradient {
+    border: 1px solid transparent;
+    border-image: linear-gradient(0.25turn, #efb35d,#e25474,#70a09e);
+    border-image-slice: 1;
+    width:100%;
+}
+
+@mixin borderGradient2px {
+    border: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, #efb35d,#e25474,#70a09e);
+    border-image-slice: 1;
+    width:100%;
+}
+
+@mixin hoverGradient {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 3px black;
+    background-image: linear-gradient(0.85turn, #efb35d,#e25474,#70a09e);
+}

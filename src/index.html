@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/sass/styles.scss">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/de74afa7c9.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://kit.fontawesome.com/de74afa7c9.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js" defer></script>
+    <title>MySneakers</title>
+</head>
+<body>
+    <header>
+        <div class="header_top">
+            <div class="header_top_content">
+                <div class="header_top_content_zone">
+                    <a href="https://www.youtube.com/watch?v=MaSAlPtEcEY" target="_blank"><button><span class="material-symbols-rounded">keyboard_backspace</span>Zone Hype</button></a>
+                </div>
+                <div class="header_top_content_caroussel">
+                    <div class="header_top_content_caroussel_container">
+                        <button class="button_icon button_icon_gauche" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                            <span class="material-symbols-rounded">chevron_left</span>
+                        </button>
+                        <div class="caroussel_container carousel" id="carousel" data-bs-ride="carousel">
+                                <div class="top_carousel-inner">
+                                    <p class="top_carousel_text carousel-item active ">Pour achat de 100$ et plus livraison Gratuite <a href="https://www.lego.com/fr-ca" target="_blank">Plus d'info</a></p>
+                                    <p class="top_carousel_text carousel-item ">Promos sur les chapeaux <a href="https://www.lego.com/fr-ca" target="_blank">Visiter les chapeaux</a></p>
+                                    <p class="top_carousel_text carousel-item ">50% de réduction sur la marque maison <a href="https://www.lego.com/fr-ca" target="_blank">Voir les produits</a></p>
+                                </div>
+                        </div>
+                        <button class="button_icon button_icon_droite" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                            <span class="material-symbols-rounded">chevron_right</span>
+                        </button>  
+                    </div>
+                </div>
+                <div class="header_top_content_compte">
+                    <a href="">
+                        <button>
+                            <span class="material-symbols-rounded">account_circle</span> Compte
+                        </button>
+                    </a>
+                    <a href="">
+                        <button>
+                            <span class="material-symbols-rounded">workspace_premium</span>VIP
+                        </button>
+                    </a>
+                </div>
+                <button class="header_top_content_close">
+                    <span class="material-symbols-rounded header_top_close">close</span>
+                </button>
+            </div>
+        </div>
+        <div class="header_nav">
+            <div class="header_nav_content">
+                <div class="header_nav_content_gauche">
+                    <div class="header_nav_content_gauche_menu">
+                        <a href="https://www.google.com/" target="_blank"><button class="material-symbols-rounded">menu</button></a>
+                    </div>
+                    <div class="header_nav_content_gauche_logo">
+                        <a href="https://www.google.com/" target="_blank"><img src="./assets/img/LOGO.png" alt="Logo de MySneakers"></a> 
+                    </div>
+                    <div class="header_nav_content_gauche_nav">
+                        <nav>
+                            <ul>
+                                <li><a class="pc_lien_nav" href="https://www.youtube.com/watch?v=ws3WGmINlIg" target="_blank">Magasiner</a></li>
+                                <li><a class="pc_lien_nav" href="https://www.youtube.com/watch?v=ws3WGmINlIg" target="_blank">Découvrir</a></li>
+                                <li><a class="pc_lien_nav" href="https://www.youtube.com/watch?v=ws3WGmINlIg" target="_blank">Aide</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="header_nav_content_droite">
+                    <a href="https://www.youtube.com/watch?v=ws3WGmINlIg" target="_blank">
+                        <button class="header_nav_droite_search">
+                            <span class="icone_nav_search material-symbols-rounded">search</span>
+                        </button>                        
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=ws3WGmINlIg" target="_blank">
+                        <button class="header_nav_droite_compte">
+                            <span class="icone_nav_compte material-symbols-rounded">person</span>
+                        </button>                        
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=ws3WGmINlIg" target="_blank">
+                        <button class="header_nav_droite_fav">
+                            <span class="icone_nav_fav material-symbols-rounded">favorite</span>
+                        </button>                        
+                    </a>
+                    <a href="https://www.google.com/" target="_blank">
+                        <button  class="header_nav_droite_sac">
+                            <span class="icone_nav_bag material-symbols-rounded">shopping_bag</span>
+                            <p>(0)</p>
+                        </button>                        
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="main_vedette">
+            <div class="main_vedette_photo">
+                <a href="https://www.youtube.com/watch?v=o-YBDTqX_ZU" target="_blank"><img src="./assets/img/accueil/airforce.png" alt="Paire d'Air Force 1 blanches"></a>
+            </div>
+            <div class="main_vedette_contenu">
+                <div class="main_vedette_contenu_texte">
+                    <h2>Sauve 15% sur ton achat en achetant une paire d'Air Force 1 !</h2>
+                    <p>Dépêche-toi, cette offre est un canular ! (Uniquement si la paire est fausse)</p>
+                    <a href="https://www.youtube.com/watch?v=o-YBDTqX_ZU" target="_blank"><button>Acheter maintenant !<span class="material-symbols-rounded">arrow_forward</span></button></a>          
+                </div>
+            </div>
+        </section>
+
+        <section class="main_categories">
+            <div class="main_categories_contenu">
+                <div class="main_categories_contenu_carte cat_logo1">
+                    <div class="main_categories_container_carte_photo">
+                        <a href="https://www.adidas.ca/" target="_blank"><img src="./assets/img/marques/adidas.png" alt="Logo d'Adidas"></a>
+                    </div>
+                    <a href="https://www.adidas.ca/" target="_blank">Adidas</a>
+                </div>
+                <div class="main_categories_contenu_carte cat_logo2">
+                    <div class="main_categories_container_carte_photo">
+                        <a href="https://www.nike.com/ca/fr/" target="_blank"><img src="./assets/img/marques/nike.png" alt="Logo de Nike"></a>
+                    </div>
+                    <a href="https://www.nike.com/ca/fr/" target="_blank">Nike</a>
+                </div>
+                <div class="main_categories_contenu_carte cat_logo3">
+                    <div class="main_categories_container_carte_photo">
+                        <a href="https://www.flightclub.com/adidas/adidas-yeezy" target="_blank"><img src="./assets/img/marques/yeezy.png" alt="Logo de Yeezy"></a>
+                    </div>
+                    <a href="https://www.flightclub.com/adidas/adidas-yeezy" target="_blank">Yeezy</a>
+                </div>
+                <div class="main_categories_contenu_carte cat_logo4">
+                    <div class="main_categories_container_carte_photo">
+                        <a href="https://www.nike.com/jordan" target="_blank"><img src="./assets/img/marques/JORDAN.png" alt="Logo de Jordan"></a>
+                    </div>
+                    <a href="https://www.nike.com/jordan" target="_blank">Jordan</a>
+                </div>
+                <div class="main_categories_contenu_carte cat_logo5">
+                    <div class="main_categories_container_carte_photo">
+                        <a href="https://www.newbalance.com/" target="_blank"><img src="./assets/img/marques/newbalance.png" alt="Logo de New Balance"></a>
+                    </div>
+                    <a href="https://www.newbalance.com/" target="_blank">NB</a>
+                </div>
+                <div class="main_categories_contenu_carte cat_logo6">
+                    <div class="main_categories_container_carte_photo">
+                        <a href="https://www.vans.ca/" target="_blank"><img src="./assets/img/marques/vans.png" alt="Logo de Vans"></a>
+                    </div>
+                    <a href="https://www.vans.ca/" target="_blank">Vans</a>
+                </div>
+                <div class="main_categories_contenu_carte cat_logo7">
+                    <div class="main_categories_container_carte_photo">
+                        <a href="https://reebok.ca/" target="_blank"><img src="./assets/img/marques/reebok.png" alt="Logo de Reebok"></a>
+                    </div>
+                    <a href="https://reebok.ca/" target="_blank">Reebok</a>
+                </div>
+                <div class="main_categories_contenu_carte cat_logo8">
+                    <div class="main_categories_container_carte_photo">
+                        <a href="https://www.crocs.ca/" target="_blank"><img src="./assets/img/marques/crocs.png" alt="Logo de Crocs"></a>
+                    </div>
+                    <a href="https://www.crocs.ca/" target="_blank">Crocs</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="main_recom">
+            <h2>Recommendations</h2>
+            <div class="main_recom_contenu">
+                <div class="main_carousel">
+                    <button class="button_fleche"><span class="material-symbols-rounded">chevron_left</span></button>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel">
+                                <div class="item_card first">
+                                    <div class="item_card_haut">
+                                        <div class="item_card_haut_fav">
+                                            <button><span class="material-symbols-rounded">favorite</span>Ajouter à la liste de cadeaux</button>
+                                        </div>
+                                        <div class="item_card_haut_photo">
+                                            <a href="https://www.google.com/" target="_blank"><img src="./assets/img/articles/Vans Sk8-Hi MTE NASA Space Voyager 350.jpg" alt="Vans Sk8-Hi MTE NASA"></a>
+                                        </div>
+                                    </div>
+                                    <div class="item_card_bas">
+                                        <div class="item_card_bas_title">
+                                            <h3>Vans Sk8-Hi MTE NASA</h3>
+                                        </div>
+                                        <div class="item_card_bas_stars">
+                                            <span class="material-symbols-rounded fill" >star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded">star</span>
+                                        </div>
+                                        <div class="item_card_bas_prix">
+                                            <p>350.00$</p>
+                                        </div>
+                                        <div class="item_card_bas_button">
+                                            <a href="https://www.google.com/" target="_blank"><button>Acheter</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_card">
+                                    <div class="item_card_haut">
+                                        <div class="item_card_haut_fav">
+                                            <button><span class="material-symbols-rounded">favorite</span>Ajouter à la liste de cadeaux</button>
+                                        </div>
+                                        <div class="item_card_haut_photo">
+                                            <a href="https://www.google.com/" target="_blank"><img src="./assets/img/articles/Yeezy Slide Glow Green 295.jpg" alt="Yeezy Slide Glow Green"></a>
+                                        </div>
+                                    </div>
+                                    <div class="item_card_bas">
+                                        <div class="item_card_bas_title">
+                                            <h3>Yeezy Slide Glow Green</h3>
+                                        </div>
+                                        <div class="item_card_bas_stars">
+                                            <span class="material-symbols-rounded fill" >star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded">star</span>
+                                        </div>
+                                        <div class="item_card_bas_prix">
+                                            <p>295.00$</p>
+                                        </div>
+                                        <div class="item_card_bas_button">
+                                            <a href="https://www.google.com/" target="_blank"><button>Acheter</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_card">
+                                    <div class="item_card_haut">
+                                        <div class="item_card_haut_fav">
+                                            <button><span class="material-symbols-rounded">favorite</span>Ajouter à la liste de cadeaux</button>
+                                        </div>
+                                        <div class="item_card_haut_photo">
+                                            <a href="https://www.google.com/" target="_blank"><img src="./assets/img/articles/Yeezy Foam RNR Sand 220.jpg" alt="Yeezy Foam RNR Sand"></a>
+                                        </div>
+                                    </div>
+                                    <div class="item_card_bas">
+                                        <div class="item_card_bas_title">
+                                            <h3>Yeezy Foam RNR Sand</h3>
+                                        </div>
+                                        <div class="item_card_bas_stars">
+                                            <span class="material-symbols-rounded fill" >star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded">star</span>
+                                        </div>
+                                        <div class="item_card_bas_prix">
+                                            <p>200.00$</p>
+                                        </div>
+                                        <div class="item_card_bas_button">
+                                            <a href="https://www.google.com/" target="_blank"><button>Acheter</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_card last">
+                                    <div class="item_card_haut">
+                                        <div class="item_card_haut_fav">
+                                            <button><span class="material-symbols-rounded">favorite</span>Ajouter à la liste de cadeaux</button>
+                                        </div>
+                                        <div class="item_card_haut_photo">
+                                            <a href="https://www.google.com/" target="_blank"><img src="./assets/img/articles/Yeezy Knit RNR Stone Carbon 445.jpg" alt="Yeezy Knit RNR Cailloux"></a>
+                                        </div>
+                                    </div>
+                                    <div class="item_card_bas">
+                                        <div class="item_card_bas_title">
+                                            <h3>Yeezy Knit RNR Cailloux</h3>
+                                        </div>
+                                        <div class="item_card_bas_stars">
+                                            <span class="material-symbols-rounded fill" >star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded">star</span>
+                                        </div>
+                                        <div class="item_card_bas_prix">
+                                            <p>445.00$</p>
+                                        </div>
+                                        <div class="item_card_bas_button">
+                                            <a href="https://www.google.com/" target="_blank"><button>Acheter</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button_fleche"><span class="material-symbols-rounded">chevron_right</span></button>                
+                </div>
+            </div>
+        </section>
+
+        <section class="main_news">
+            <h2>Les aventures de YE</h2>
+            <div class="main_news_contenu">
+                <div class="main_carousel">
+                    <button class="button_fleche"><span class="material-symbols-rounded">chevron_left</span></button>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel">
+                                <div class="news_card first">
+                                    <div class="news_card_image">
+                                        <a href="https://www.google.com/" target="_blank"><img src="./assets/img/news/KanyeCrying.png" alt="Kanye West qui pleure."></a>
+                                    </div>
+                                    <div class="news_card_texte">
+                                        <h4>Adidas coupe les ponts avec Kanye</h4>
+                                        <p>La fin de la marque Yeezy ! (et de Ye), pleurons avec lui les amis !</p>
+                                        <a href="https://www.lesoleil.com/2022/10/25/adidas-coupe-les-ponts-avec-kanye-west-apres-des-remarques-antisemites-340699b7f9ccacb620d70cc2b7391107" target="_blank">Lire l'article <span class="material-symbols-rounded">chevron_right</span></a>
+                                    </div>
+                                </div>
+                                <div class="news_card">
+                                    <div class="news_card_image">
+                                        <a href="https://www.google.com/" target="_blank"><img src="./assets/img/news/YeVoitRien.png" alt="Kanye West avec des lunettes de soleil."></a>
+                                        
+                                    </div>
+                                    <div class="news_card_texte">
+                                        <h4>Ye veut rencontrer Vladimir Poutine</h4>
+                                        <p>Il souhaite même donner des concerts en Russie.</p>
+                                        <a href="https://www.billboard.com/music/rb-hip-hop/kanye-ye-russia-putin-trip-sunday-service-1235017604/" target="_blank">Lire l'article <span class="material-symbols-rounded">chevron_right</span></a>
+                                    </div>
+                                </div>
+                                <div class="news_card">
+                                    <div class="news_card_image">
+                                        <a href="https://www.google.com/" target="_blank"><img src="./assets/img/news/YeCalinTrump.png" alt="Kanye West serrant Donald Trump dans ses bras."></a>
+                                    </div>
+                                    <div class="news_card_texte">
+                                        <h4>Ye veut participer aux présidentielles de 2024</h4>
+                                        <p>Il veut y participer aux côtés de Donald Trump ! </p>
+                                        <a href="https://www.ledevoir.com/monde/etats-unis/772284/kanye-west-suggere-qu-il-sera-candidat-a-la-presidentielle-americaine-de-2024" target="_blank">Lire l'article <span class="material-symbols-rounded">chevron_right</span></a>
+                                    </div>
+                                </div>
+                                <div class="news_card last">
+                                    <div class="news_card_image">
+                                        <a href="https://www.google.com/" target="_blank"><img src="./assets/img/news/YeGospel.png" alt="Kanye West entrain de se recueillir auprès de Dieu avec ses amis."></a>
+                                    </div>
+                                    <div class="news_card_texte">
+                                        <h4>Ye se met au gospel</h4>
+                                        <p>Il ne fera plus de musique "profane", juste du gospel.</p>
+                                        <a href="https://www.youtube.com/watch?v=TfpiHv1kP5E" target="_blank">Lire l'article <span class="material-symbols-rounded">chevron_right</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button_fleche"><span class="material-symbols-rounded">chevron_right</span></button>                
+                </div>
+            </div>
+        </section>
+
+        <section class="main_collections">
+            <h2>Collections</h2>
+            <div class="main_collections_contenu">
+                <div class="main_carousel">
+                    <button class="button_fleche"><span class="material-symbols-rounded">chevron_left</span></button>
+                    <div class="carousel-container">
+                            <div class="carousel-wrapper">
+                                <div class="carousel">
+                                    <div class="news_card first">
+                                        <div class="news_card_image">
+                                            <a href="https://www.google.com/" target="_blank"><img src="./assets/img/news/AdidasXGucci.png" alt="Mannequins portant des pièces de la collection Adidas X Gucci."></a>
+                                        </div>
+                                        <div class="news_card_texte">
+                                            <h4>Adidas X Gucci</h4>
+                                            <p>Adidas annonce sa collaboration avec Gucci.</p>
+                                            <a href="https://www.adidas.ca/en?cm_mmc=AdiSEM&gclid=Cj0KCQiA3eGfBhCeARIsACpJNU_bVx7LVeeNR-UJncOnVVUoB9vJroqBIBgBOlYb5uPPODhM-zVYTCcaAu4kEALw_wcB&gclsrc=aw.ds" target="_blank">Lire l'article <span class="material-symbols-rounded">chevron_right</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="news_card">
+                                        <div class="news_card_image">
+                                            <a href="https://www.google.com/" target="_blank"><img src="./assets/img/news/Nike x John Collection.png" alt="Johnny est ses paires de Nike vollés"></a>
+                                        </div>
+                                        <div class="news_card_texte">
+                                            <h4>Les nikes volés de John</h4>
+                                            <p>Notre partenaire d’affaire Johnny-Claude (des Jones), nous présente sa collection de Nike volées.</p>
+                                            <a href="https://www.youtube.com/watch?v=cwxOXJeZ5sk" target="_blank">Lire l'article <span class="material-symbols-rounded">chevron_right</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="news_card">
+                                        <div class="news_card_image">
+                                            <a href="https://www.google.com/" target="_blank"><img src="./assets/img/news/MongoseXVansXOurLegends.png" alt="Appercu de la collection mongoose X Vans X Our Legend"></a>
+                                        </div>
+                                        <div class="news_card_texte">
+                                            <h4>mongoose X Vans X Our Legends</h4>
+                                            <p>La collaboration entre mongoose Vans et Our Legends sort bientôt.</p>
+                                            <a href="https://www.vans.ca/fr-ca?gclid=Cj0KCQiA3eGfBhCeARIsACpJNU_QjDKDkFb6P-nQ7AuA0iPizMwar-uObCv6iksQ1ROBr5CFqEjxBCcaAiMLEALw_wcB" target="_blank">Lire l'article <span class="material-symbols-rounded">chevron_right</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="news_card last">
+                                        <div class="news_card_image">
+                                            <a href="https://www.google.com/" target="_blank"><img src="./assets/img/news/YeezyUltimateCol.png" alt="Kanye West présentant des pièces de la collection ultime de Yeezy"></a>
+                                            
+                                        </div>
+                                        <div class="news_card_texte">
+                                            <h4>L'ultime collection de Yeezy</h4>
+                                            <p>Ye dévoile sa deuxième (et ultime) collection  avec Yeezy. Elle est "covid proof".</p>
+                                            <a href="https://news.adidas.com/yeezy" target="_blank">Lire l'article <span class="material-symbols-rounded">chevron_right</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <button class="button_fleche"><span class="material-symbols-rounded">chevron_right</span></button>                
+                </div>
+            </div>
+        </section>
+
+        <section class="main_exclus">
+            <h2>Précommande</h2>
+            <div class="container">
+                <div class="box yeezy">
+                    <a href="https://www.google.com/" target="_blank"><img src="./assets/img/cta/foamrnnr.png" alt="Paire de Yeezy Rnnr Blanches"></a>
+                    <div class="text">
+                        <h4>YEEZY RnnR</h4>
+                        <p>Bientôt en magasin</p>
+                        <a href="https://www.google.com/" target="_blank">Réserver ma paire</a>
+                    </div>
+                </div>
+                <div class="box jordan">
+                    <a href="https://www.google.com/" target="_blank"><img src="./assets/img/cta/jordanxgatorade.png" alt="Paire de Jordan X Gatorade"></a>
+                    <div class="text">
+                        <h4>JORDAN X GATORADE</h4>
+                        <p>Bientôt en magasin</p>
+                        <a href="https://www.google.com/" target="_blank">Réserver ma paire</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main_cta">
+            <div class="main_cta_contenu">
+                <img class="adidas_pc" src="./assets/img/accueil/ctapc.png" alt="Paire d'Adidas Verte Pâle sur un fond grid avec le logo Adidas">
+                <img src="./assets/img/accueil/ctamobile.png" alt="Paire d'Adidas Verte Pâle sur un fond grid avec le logo Adidas" class="adidas_mobile">
+                <div class="cta_texte">
+                    <p>Il y en a pour tout le monde... Pour ceux qui courent et même pour les ***** de lâches.</p>
+                    <a href="https://www.google.com/" target="_blank"><button>Je me reconnais !</button></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="main_plusvendus">
+            <h2>Les plus vendus</h2>
+            <div class="main_plusvendus_contenu">
+                <div class="main_carousel">
+                    <button class="button_fleche"><span class="material-symbols-rounded">chevron_left</span></button>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel">
+                                <div class="item_card first">
+                                    <div class="item_card_haut">
+                                        <div class="item_card_haut_fav">
+                                            <button><span class="material-symbols-rounded">favorite</span>Ajouter à la liste de cadeaux</button>
+                                        </div>
+                                        <div class="item_card_haut_photo">
+                                            <a href="https://www.google.com/"><img src="./assets/img/articles/jordan-jordan-1-low-white-toe-7-us.jpg" alt="Jordan 1 Low White Toe"></a>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="item_card_bas">
+                                        <div class="item_card_bas_title">
+                                            <h3>Jordan 1 Low White Toe (Pas des vrais)</h3>
+                                        </div>
+                                        <div class="item_card_bas_stars">
+                                            <span class="material-symbols-rounded fill" >star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded">star</span>
+                                        </div>
+                                        <div class="item_card_bas_prix">
+                                            <p>255.00$</p>
+                                        </div>
+                                        <div class="item_card_bas_button">
+                                            <a href="https://www.google.com/"><button>Acheter</button></a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_card">
+                                    <div class="item_card_haut">
+                                        <div class="item_card_haut_fav">
+                                            <button><span class="material-symbols-rounded">favorite</span>Ajouter à la liste de cadeaux</button>
+                                        </div>
+                                        <div class="item_card_haut_photo">
+                                            <a href="https://www.google.com/"><img src="./assets/img/articles/nike-nike-air-terra-forma-off-white-wheat-green-st.jpg" alt="Nike Air Terra Forma Off-White Wheat Green"></a>
+                                        </div>
+                                    </div>
+                                    <div class="item_card_bas">
+                                        <div class="item_card_bas_title">
+                                            <h3>Nike Air Terra Forma Off-White Wheat Green</h3>
+                                        </div>
+                                        <div class="item_card_bas_stars">
+                                            <span class="material-symbols-rounded fill" >star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded">star</span>
+                                        </div>
+                                        <div class="item_card_bas_prix">
+                                            <p>395.00$</p>
+                                        </div>
+                                        <div class="item_card_bas_button">
+                                            <a href="https://www.google.com/"><button>Acheter</button></a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_card">
+                                    <div class="item_card_haut">
+                                        <div class="item_card_haut_fav">
+                                            <button><span class="material-symbols-rounded">favorite</span>Ajouter à la liste de cadeaux</button>
+                                        </div>
+                                        <div class="item_card_haut_photo">
+                                            <a href="https://www.google.com/"><img src="./assets/img/articles/nike-nike-dunk-high-light-bone-diffused-blue-gs.jpg" alt="Nike Dunk High Light Bone Diffused Blue"></a>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="item_card_bas">
+                                        <div class="item_card_bas_title">
+                                            <h3>Nike Dunk High Light Bone Diffused Blue</h3>
+                                        </div>
+                                        <div class="item_card_bas_stars">
+                                            <span class="material-symbols-rounded fill" >star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded">star</span>
+                                        </div>
+                                        <div class="item_card_bas_prix">
+                                            <p>235.00$</p>
+                                        </div>
+                                        <div class="item_card_bas_button">
+                                            <a href="https://www.google.com/"><button>Acheter</button></a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_card last">
+                                    <div class="item_card_haut">
+                                        <div class="item_card_haut_fav">
+                                            <button><span class="material-symbols-rounded">favorite</span>Ajouter à la liste de cadeaux</button>
+                                        </div>
+                                        <div class="item_card_haut_photo">
+                                            <a href="https://www.google.com/"><img src="./assets/img/articles/yeezy-yeezy-boost-350-v2-salt-95-us.jpg" alt="Yeezy Boost 350 V2 Salt"></a>
+                                        </div>
+                                    </div>
+                                    <div class="item_card_bas">
+                                        <div class="item_card_bas_title">
+                                            <h3>Yeezy Boost 350 V2 Salt (Portés par Ye)</h3>
+                                        </div>
+                                        <div class="item_card_bas_stars">
+                                            <span class="material-symbols-rounded fill" >star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded fill">star</span>
+                                            <span class="material-symbols-rounded">star</span>
+                                        </div>
+                                        <div class="item_card_bas_prix">
+                                            <p>525.00$</p>
+                                        </div>
+                                        <div class="item_card_bas_button">
+                                            <a href="https://www.google.com/"><button>Acheter</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button_fleche"><span class="material-symbols-rounded">chevron_right</span></button>                
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer_contenu">
+            <div class="footer_contenu_container">
+                <div class="footer_haut">
+                    <div class="footer_colonne colonne1">
+                        <img src="./assets/img/LOGO blanc.png" alt="Logo de MySneakers.">
+                        <button class="footer_position"><span class="material-symbols-rounded">location_on</span>Canada</button>
+                        <div class="colonne1_list">
+                            <ul>
+                                <li><a href="https://www.google.com/" target="_blank">Cartes-Cadeaux</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Catalogues</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Trouver un magasin</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_newsletter">
+                            <p>Inscrit toi à notre infolettre</p>
+                            <form action="#" method="post">
+                                <input type="email" id="email" name="email" placeholder="Entrez votre adresse e-mail ici" required>
+                                <button type="submit"><span class="material-symbols-rounded">arrow_forward</span></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="footer_colonne colonne2">
+                        <h5>À notre sujet</h5>
+                        <button><span class="material-symbols-rounded">expand_more</span></button>
+                        <div class="footer_colonne_liste">
+                            <ul>
+                                <li><a href="https://www.google.com/" target="_blank">L'équipe</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Nos produits</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Emploi chez nous</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Durabilité</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Notre sauce officielle</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Notre histoire</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Nos pat'nais</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_colonne colonne3">
+                        <h5>Assistance</h5>
+                        <button><span class="material-symbols-rounded">expand_more</span></button>
+                        <div class="footer_colonne_liste">
+                            <ul>
+                                <li><a href="https://www.google.com/" target="_blank">Nous joindre</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Jette ta paire</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Comment attacher ses lacets</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Comment prouver que tes souliers sont les meilleurs</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Financement</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Carte de crédit</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Livraison</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_colonne colonne4">
+                        <h5>Nos fournisseurs</h5>
+                        <button><span class="material-symbols-rounded">expand_more</span></button>
+                        <div class="footer_colonne_liste">
+                            <ul>
+                                <li><a href="https://www.google.com/" target="_blank">Les Jones</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Yessir Miller</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Lorenzo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_colonne colonne5">
+                        <h5>Plus à notre sujet</h5>
+                        <button><span class="material-symbols-rounded">expand_more</span></button>
+                        <div class="footer_colonne_liste">
+                            <ul>
+                                <li><a href="https://www.google.com/" target="_blank">Nos partenaires</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Fondation</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Règles Covid</a></li>
+                                <li><a href="https://www.google.com/" target="_blank">Influenceurs</a></li>
+                            </ul>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="footer_bas">
+                    <div class="colonne6">
+                        <div class="footer_newsletter">
+                            <p>Inscrit toi à notre infolettre</p>
+                            <form action="#" method="post">
+                                <input type="email" id="email" name="email" placeholder="Entrez votre adresse e-mail ici" required>
+                                <button type="submit"><span class="material-symbols-rounded">arrow_forward</span></button>
+                            </form>
+                        </div>
+                        <div class="footer_reseaux">
+                            <p>Suivez-nous</p>
+                            <div>
+                                <button><a href="https://www.google.com/" target="_blank"><span class="material-symbols-rounded">flutter_dash</span></a></button>
+                                <button><a href="https://www.google.com/" target="_blank"><span class="material-symbols-rounded">thumbs_up_down</span></a></button>
+                                <button><a href="https://www.google.com/" target="_blank"><span class="material-symbols-rounded">face_5</span></a></button>
+                                <button><a href="https://www.google.com/" target="_blank"><span class="material-symbols-rounded">videocam</span></a></button>
+                            </div>
+                            <p class="signature">Bryan Jobin, terminé le 24 Février 2023.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

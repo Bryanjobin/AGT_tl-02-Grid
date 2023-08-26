@@ -1,0 +1,288 @@
+// CARROUSEL DU HEADER
+.header_top_content_caroussel {
+    @include flexCentre;
+    color: white;
+    width: 100%;
+    .header_top_content_caroussel_container {
+        @include flexCentre;
+        width: 100%;
+        button {
+            background-color: $transparent;
+            border: none;
+            color: white;
+            span {
+                font-size: 2em;
+            }
+        }
+        .caroussel_container {
+            @include flexCentre;
+            width: 100%;
+            .top_carousel-inner {
+                p {
+                    font-size: 13px;
+                    margin-top: 10px;
+                    text-align: center;
+                    a {
+                        text-decoration: none;
+                    }
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }            
+            }
+        }
+    }
+}
+
+// LES CAROUSSELS DANS LE MAIN
+.main_carousel {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        .carousel-wrapper {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 30px;
+            .carousel {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 20px;
+                margin: auto;
+            }
+        }
+    }
+    .button_fleche {
+        background-color: rgba(0, 0, 0, 0.726);
+        border-radius: 160px;
+        border: none;
+        color: white;
+        height: 30px;
+        width: 30px;
+        span {
+            @include flexCentre;
+            border-radius: 100px;
+        }
+    }
+    .button_fleche:hover {
+        @include hoverGradient;
+    }
+}
+
+// CARTES D'ITEMS ET CARTES D'ARTICLES
+.item_card {
+    width: 13.5vw;
+    .item_card_haut {
+        position: relative;
+        .item_card_haut_fav {
+            margin: 10px;
+            position: absolute;
+            z-index: 1;
+            button {
+                background-color: $transparent;
+                border: none;
+                display: flex;
+                font-size: 12px;
+                span {
+                    margin-right: 5px;
+                }
+            }
+        }
+        .item_card_haut_fav:hover {
+            button {
+                font-weight: 600;
+                span {
+                    background-image: linear-gradient(0.25turn, #efb35d,#e25474,#70a09e);                
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+        .item_card_haut_photo {
+            position: relative;
+            z-index: 0;
+            img {
+                @include flexCentre;
+                border: 1px solid black;
+                margin: auto;
+                width: 100%;
+            }
+        }
+    }
+    .item_card_bas {
+        h3 {
+            color: black;
+            font-size: 1vw;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+        .item_card_bas_prix > p {
+            color: black;
+            font-size: 1vw;
+            font-weight: 500;
+        }
+        .item_card_bas_stars {
+            display: flex;
+            margin-left: -2px;
+            span {
+                letter-spacing: -2px;
+                font-size: 1.1vw;
+                background-image: linear-gradient(0.25turn, #efb35d,#e25474,#70a09e);                
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .fill {
+                font-variation-settings:
+                'FILL' 1,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48
+            }
+        }
+        .item_card_bas_button {
+            a > button {
+                background-color: black;
+                border: none;
+                border-radius: 8px;
+                color: white;
+                font-weight: 600;
+                padding: 20px;
+                width: 13.5vw;
+            }
+            a > button:hover {
+                @include hoverGradient;
+                border: solid 1px black;
+            }
+        }
+    }
+}
+
+.news_card {
+    height: 100%;
+    width: 11.5vw;
+    .news_card_image > a > img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .news_card_texte {
+        color: black;
+        text-align: center;
+        h4 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        p {
+            color: rgb(68, 68, 68);
+            font-size: 16px;
+        }
+        a {
+            color: rgb(153, 0, 38);
+            display: flex;
+            font-weight: 500;
+            justify-content: center;
+            margin: 10px 0px 0px 10px;
+            text-decoration: none;
+            span {
+                font-weight: 300;
+            }
+        }
+        a:hover {
+            color: black;
+            font-weight: 600;
+            span {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+// MEDIA QUERIES (CAROUSSEL ET CARTES)
+@media (max-width: $breakpoint) {
+    .main_carousel {
+        width: 100vw;
+        .carousel_container > .carousel-wrapper > .carousel {
+            gap: 0;
+        }
+        .button_fleche{
+            @include cacher;
+        }
+    }
+    .news_card {
+        width: 23vw;
+    }
+    .item_card {
+        width: 23vw;
+        .item_card_haut > .item_card_haut_fav > button {
+            font-size: 2vw;
+        }
+        .item_card_bas {
+            .item_card_bas_title > h3 {
+                font-size: 1.3em;
+            }
+            .item_card_bas_prix > p {
+                font-size: 3vw ;
+            }
+            .item_card_bas_button > a > button {
+                width: 23vw;
+                padding: 1.2vw;
+            }
+        }
+    }
+    .first {
+        margin-left: 12px;
+    }
+    .last {
+        margin-right: 12px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .item_card {
+        width: 40vw;
+        .item_card_bas {
+            .item_card_bas_button > a > button {
+                width: 100%;
+            }
+            .item_card_bas_stars > span {
+                font-size: 4vw;
+            }
+        }
+    }
+    .news_card {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 540px) {
+    .item_card {
+        width: 85vw;
+        .item_card_haut > .item_card_haut_fav > button {
+            font-size: 3vw;
+            span {
+                font-size: 6vw;
+            }
+        }
+        .item_card_bas {
+            .item_card_bas_stars > span {
+                font-size: 6vw;
+            }
+            .item_card_bas_prix > p {
+                font-size: 5vw ;
+            }
+            .item_card_bas_button > a button {
+                width: 100%;
+                padding: 4vw;
+            }
+        }
+    }
+    .news_card {
+        width: 85vw;
+    }
+}
+
+
+

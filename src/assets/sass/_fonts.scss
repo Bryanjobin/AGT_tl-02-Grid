@@ -1,0 +1,50 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+section > h2 {
+    color: black;
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+
+.main_recom > h2 {
+    margin-left: 5vw;
+}
+
+.main_news > h2, .main_collections > h2 {
+    margin-left: 0.8vw;
+}
+
+.main_plusvendus > h2 {
+    margin-left: 1.8vw;
+}
+
+.main_cta_contenu > .cta_texte {
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width: $breakpoint) {
+    section > h2 {
+        font-size: 3vw;
+    }
+    .main_recom > h2, .main_plusvendus > h2 {
+        margin-left: 12px;
+    }
+    .main_news > h2, .main_collections > h2 {
+        margin-left: 12px;
+    }
+    .main_exclus >h2 {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 540px) {
+    section > h2 {
+        font-size: 5vw;
+        margin-left: 12px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+}
+
